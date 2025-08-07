@@ -160,7 +160,7 @@ $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/a
 
 # Lineage Health
 PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
+    vendor.android.health-service.default
 
 # Media
 PRODUCT_COPY_FILES += \
