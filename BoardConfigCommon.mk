@@ -117,6 +117,20 @@ $(call soong_config_set,libinit,vendor_init_lib,//device/samsung/a21s-common:lib
 # A/B
 AB_OTA_UPDATER := false
 
+<<<<<<< HEAD
+=======
+## Lineage Health
+$(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/battery/batt_slate_mode)
+$(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
+$(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
+$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
+$(call soong_config_set,lineage_health,charging_control_supports_toggle,true)
+$(call soong_config_set,lineage_health,charging_control_supports_deadline,false)
+$(call soong_config_set,lineage_health,fast_charge_node,/sys/class/sec/switch/afc_disable)
+$(call soong_config_set,lineage_health,fast_charge_value_none,1)
+$(call soong_config_set,lineage_health,fast_charge_value_fast_charge,0)
+
+>>>>>>> 264d3b5 (a21s-common: Migrate to lineagehealth IFastCharge)
 ## Manifest
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
