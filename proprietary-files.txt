@@ -6,6 +6,9 @@ vendor/etc/default_volume_tables.xml
 vendor/etc/dolby/dax-default.xml
 vendor/etc/floating_feature.xml
 vendor/etc/usb_audio_policy_configuration.xml
+vendor/lib/soundfx/libswdap.so
+vendor/lib/libprofileparamstorage.so
+vendor/lib/libsecaudiocoreutils.so
 
 # Audio Firmware
 vendor/firmware/AP_AUDIO_SLSI.bin
@@ -16,6 +19,11 @@ vendor/firmware/calliope_dram_2.bin
 vendor/firmware/calliope_sram.bin
 vendor/firmware/calliope_sram_2.bin
 vendor/firmware/dax_param.bin
+
+# dolby fix
+vendor/lib/soundfx/libswdap.so
+vendor/lib/libprofileparamstorage.so
+vendor/lib/libsecaudiocoreutils.so
 
 # Bluetooth Firmware
 vendor/etc/wifi/mx140_bt.hcf
