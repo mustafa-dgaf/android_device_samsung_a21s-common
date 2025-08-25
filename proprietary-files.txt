@@ -18,8 +18,9 @@ vendor/firmware/calliope_sram_2.bin
 vendor/firmware/dax_param.bin
 
 # dolby fix
-vendor/lib64/soundfx/libswdap.so
 vendor/lib/soundfx/libswdap.so
+vendor/lib/libprofileparamstorage.so
+vendor/lib/libsecaudiocoreutils.so
 
 # Bluetooth Firmware
 vendor/etc/wifi/mx140_bt.hcf
