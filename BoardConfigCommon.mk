@@ -56,7 +56,7 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 
 ## Camera
-$(call soong_config_set,samsungCameraVars,usage_64bit,true)
+$(call soong_config_set_bool,samsungCameraVars,usage_64bit,true)
 
 # Camera
 SOONG_CONFIG_NAMESPACES += samsungCameraVars
@@ -121,18 +121,17 @@ AB_OTA_UPDATER := false
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/battery/batt_slate_mode)
 $(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
 $(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
-$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
-$(call soong_config_set,lineage_health,charging_control_supports_toggle,true)
-$(call soong_config_set,lineage_health,charging_control_supports_deadline,false)
+$(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
+$(call soong_config_set_bool,lineage_health,charging_control_supports_toggle,true)
+$(call soong_config_set_bool,lineage_health,charging_control_supports_deadline,false)
 $(call soong_config_set,lineage_health,fast_charge_node,/sys/class/sec/switch/afc_disable)
 $(call soong_config_set,lineage_health,fast_charge_value_none,1)
 $(call soong_config_set,lineage_health,fast_charge_value_fast_charge,0)
 
 ## Manifest
 # HIDL
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    hardware/samsung/vintf/samsung_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    hardware/samsung/vintf/samsung_framework_compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
@@ -190,13 +189,6 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 ## USB
 $(call soong_config_set,samsungUsbGadgetVars,gadget_name,13600000.dwc3)
-
-# SKU
-ODM_MANIFEST_SKUS += hce hceese hcesim hcesimese
-ODM_MANIFEST_HCE_FILES := $(COMMON_PATH)/configs/nfc/manifest_hce.xml
-ODM_MANIFEST_HCEESE_FILES := $(COMMON_PATH)/configs/nfc/manifest_hceese.xml
-ODM_MANIFEST_HCESIM_FILES := $(COMMON_PATH)/configs/nfc/manifest_hcesim.xml
-ODM_MANIFEST_HCESIMESE_FILES := $(COMMON_PATH)/configs/nfc/manifest_hcesimese.xml
 
 ## Verified Boot
 BOARD_AVB_ENABLE := true
