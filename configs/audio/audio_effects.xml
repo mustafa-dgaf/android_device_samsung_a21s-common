@@ -30,7 +30,6 @@
         <library name="dynamics_processing" path="libdynproc.so"/>
         <library name="pre_processing" path="libaudiopreprocessing.so" />
         <library name="dap" path="libswdap.so"/>
-        <library name="v4a_re" path="libv4a_re.so"/>
     </libraries>
 
     <!-- list of effects to load.
@@ -89,8 +88,7 @@
             <libhw library="offload" uuid="a0c30891-8246-4aef-b8ad-d53e26da0253"/>
         </effectProxy>
         <effect name="volumemonitor_hw" library="offload" uuid="052a63b0-f95a-11e9-8f0b-362b9e155667"/>
-        <effect name="v4a_standard_re" library="v4a_re" uuid="90380da3-8536-4744-a6a3-5731970e640f"/>
-        </effects>
+    </effects>
 
     <!-- Audio pre processor configurations.
          The pre processor configuration is described in a "preprocess" element and consists in a
